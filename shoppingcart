@@ -1,0 +1,62 @@
+ import java.util.Vector;
+public class ShoppingCart {
+ Vector<Item> list = new Vector<>();
+ public void addItem(Item item) {
+	 this.list.add(item);
+ }
+ public int itemCount() {
+	 return this.list.size();
+ }
+ public double totalPrice() {
+	 int t,i;
+	 t=0;
+	 if(this.list.size()!=0) {
+		 for(i=0;i<this.list.size();i++) {
+			 t+=this.list.get(i).getPrice();
+				 
+		 }
+	 }else {
+		 System.out.println("the list is impty");
+	 }
+	 return t;
+ }
+ public boolean removeItem(Item item) {
+	 if(this.list.size()!=0) {
+		 for(int i=0;i<=this.list.size();i++) {
+			 if(this.list.get(i).getName().equals(item.getName()) && this.list.get(i).getPrice()==item.getPrice()) {
+				 this.list.remove(list.get(i));
+			 }
+		 }
+		 return true;
+	 }else {
+		 return false;
+	 }
+ }
+ public boolean removeItem(String name, double price) {
+	 if(this.list.size()!=0) {
+		 int b =this.list.size();
+		 for(int i=0;i<=b;i++) {
+			 if(this.list.get(i).getName().equals(name) && this.list.get(i).getPrice()==price) {
+				 this.list.remove(list.get(i));	 
+				 b=this.list.size()-1;
+			 }
+		 }
+		 return true;
+	 }else {
+		 return false;
+	 }
+ }
+ public boolean removeItems(String name, double price) {
+	 if(this.list.size()!=0) {
+		 for(int i=0;i<=this.list.size();i++) {
+			 if(this.list.get(i).getName().equals(name) && this.list.get(i).getPrice()==price) {
+				 this.list.remove(list.get(i));
+			 }
+		 }
+		 return true;
+	 }else {
+		 return false;
+	 }
+ }
+ 
+}
