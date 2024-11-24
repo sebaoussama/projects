@@ -1,0 +1,32 @@
+package pw2;
+
+import java.util.Vector;
+
+public class MarketSystem {
+ 
+private Person p;
+private Item produit;
+private CreditCart cart;
+private ShoppingCart shoppingcart;
+public MarketSystem(Person p, Item produit, CreditCart cart, ShoppingCart shoppingcart) {
+	super();
+	this.p = p;
+	this.produit = produit;
+	this.cart = cart;
+	this.shoppingcart = shoppingcart;
+}
+Vector<Item> list = new Vector<>();
+public  void adItem(Item p) {
+	Item p1 = new Item("coca",150);
+	Item p2 = new Item("telephone mobile",9999);
+	this.list.add(p1);
+	this.list.add(p2);
+}
+	
+
+Vector<ShoppingCart> list2=new Vector<>();
+public static void addItemToCart(Person prs,Item p) {
+	for(int i=0;i<=this.list2.size();i++) {
+}
+	
+}
