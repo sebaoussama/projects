@@ -1,0 +1,21 @@
+public class Account {
+ private double balance;
+ private int nemberOfCreditCart;
+ private int pin;
+  public Account (double balance) {
+	  this.balance=balance;
+  }
+  public boolean deduct(int nbrOfCreditCart ,int pin,double amount) {
+	  if(this.nemberOfCreditCart ==nbrOfCreditCart && this.balance>= amount && this.pin==pin) {
+		  balance= balance - amount;
+		  return true;
+	  }
+	  else {
+		  return false;
+	  }
+	  
+  }
+  public double getBalance() {
+	  return balance;
+  }
+}
