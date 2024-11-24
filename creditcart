@@ -1,0 +1,23 @@
+
+public class CreditCart {
+ private Account account;
+ private int pin;
+ private String firstname;
+ private String secondname;
+ private int nemberOfCriditCart;
+public CreditCart(Account acount, int pin, String firstname, String secondname) {
+	super();
+	this.account = account;
+	this.pin = pin;
+	this.firstname = firstname;
+	this.secondname = secondname;
+}
+  public boolean payment(double amount , int pin, int nemberOfCriditCart) {
+	  if(this.pin ==pin  && this.nemberOfCriditCart==nemberOfCriditCart) {
+		  return account.deduct(nemberOfCriditCart, pin, amount);
+	  }else {
+		  return false;
+	  }
+	  
+  }
+}
