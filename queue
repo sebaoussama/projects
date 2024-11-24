@@ -1,0 +1,36 @@
+import java.util.Vector;
+public class QueueOfPersons {
+
+	 
+		 Vector<Person> p = new Vector<>(5);
+		 public void enter(Person client ) {
+			 this.p.add(client);
+		 }
+		 public Person exit() {
+			Person personremoved = this.p.get(0);
+			this.p.remove(0);
+			return personremoved;   
+		 }
+		 public boolean isEmpty() {
+			 return this.p.isEmpty();
+		 }
+		 public boolean isFull() {
+			 if(this.p.size()==5) {
+				 return true;
+			 }else {
+				 return false;
+			 }
+		 }
+		 public Person getPerson(String firstname,String secondname) {
+			 Person Personndd = null;
+			 for(int i=0;i< this.p.size();i++) {
+				 if(this.p.get(i).getFirstname().equals(firstname) && this.p.get(i).getSecondname().equals(secondname)) {
+					 Personndd = this.p.get(i);
+				 }
+				 
+			 }
+			 return Personndd;
+		 }
+		
+		
+	 }
